@@ -29,14 +29,15 @@ public class EmpWages6 {
 				empHrs = 8;// Employee Fulltime present
 				break;
 			}
-			// Calculating Daily Wages, Monthly Wages and Total Wages of employee
+			// Calculating Daily Wages, Monthly Wages of employee
 
 			dailywages = wagesperhrs * empHrs;
 			monthlyWage = monthlyWage + dailywages;
-			totalempHrs += monthlyWage;
+			// Total Hour calculation
+			totalempHrs = totalempHrs + empHrs;
 		}
 		System.out.println("Employee dailywages is " + dailywages + ", Monthly wages is " + monthlyWage
-				+ " and total wages is " + totalempHrs);
+				+ " and Total Hours is " + totalempHrs);
 	}
 
 	public static void main(String[] args) {
