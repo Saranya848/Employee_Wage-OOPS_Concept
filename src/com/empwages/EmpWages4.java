@@ -20,7 +20,7 @@ public class EmpWages4 {
 			empHrs = 8;// Employee Fulltime present
 			break;
 		}
-		// Daily Wages for part time
+		// Calculating Daily Wages of employee
 		int dailywages = wagesperhrs * empHrs;
 		System.out.println("Employee Wage is " + dailywages);
 
