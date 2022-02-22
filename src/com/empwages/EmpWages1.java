@@ -16,10 +16,9 @@ public class EmpWages1 {
 			System.out.println("Employee is Present");
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		EmpWages1 ew = new EmpWages1();
-		//declaring constants
+		// declaring constants
 		ew.empstatus();
 	}
 
