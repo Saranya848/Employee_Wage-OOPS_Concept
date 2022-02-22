@@ -2,38 +2,29 @@ package com.empwages;
 
 public class EmpWages2 {
 
-	private void empdata() {
-		final int fullperhrs = 8;
+	public static void empdata(int fulltime, int parttime) {
 		final int wagesperhrs = 20;
-		int isfulltime = 1;
 		int empHrs = 0;
 		// number for 0 for absent 1 for present
 		int empCheck = (int) Math.floor(Math.random() * 10) % 2;
 		// System.out.println(empCheck);
 
-		// if condition to check employee is present for 1
-		if (empCheck == 1) {
-			System.out.println("Employee is Present");
-			if (empCheck == isfulltime)
-				empHrs = 8;
-			else
-				empHrs = 4;
-			int dailywages = fullperhrs * wagesperhrs;
-			System.out.println("Employee Wage is " + dailywages);
-			
-		}
-
-		// else condition to check employee is absent for 0
+		// if condition to check employee is working full time, part time or absent
+		if (empCheck == fulltime)
+			empHrs = 8;
+		else if (empCheck == parttime)
+			empHrs = 4;
 		else
-			System.out.println("Employee is Absent");
-		
+			empHrs = 0;
+		// Calculating daily wages
+		int dailywages = wagesperhrs * empHrs;
+		System.out.println("Employee Wage is " + dailywages);
 
 	}
 
 	public static void main(String[] args) {
-		EmpWages2 ew = new EmpWages2();
+		int parttime = 1, fulltime = 2;
 		// declaring constants
-		ew.empdata();
+		empdata(parttime, fulltime);
 	}
-
 }
